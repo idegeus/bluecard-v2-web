@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Foreground Service Demo · BlueCard</title>
+<meta name="description" content="How BlueCard uses the FOREGROUND_SERVICE_CONNECTED_DEVICE permission for Bluetooth card games.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0F5A43">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+  video { width: 100%; height: auto; display: block; border-radius: 12px; border: 1px solid var(--line); background: #0A3D2E; }
+  .doc ol { padding-left: 22px; }
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../"><img src="../assets/icon-192.png" alt="">BlueCard</a>
+  </div>
+</header>
+<div class="doc-head">
+  <div class="wrap">
+    <h1>Foreground service demo</h1>
+    <p>FOREGROUND_SERVICE_CONNECTED_DEVICE · continuous data transfer to an external device</p>
+  </div>
+</div>
+<main class="wrap doc" style="max-width:1000px">
+  <video controls playsinline preload="metadata" poster="poster.jpg">
+    <source src="bluecard-foreground-service-demo.mp4" type="video/mp4">
+    <a href="bluecard-foreground-service-demo.mp4">Download the video (MP4)</a>
+  </video>
+
+  <h2>What the video shows</h2>
+  <p>BlueCard is a card game that people play together in the same room, each on their own phone. The phones are
+  connected directly over Bluetooth; there is no internet server. One phone hosts the table and the other phones
+  connect to it.</p>
+  <ol>
+    <li>Phone 1 opens a table. BlueCard starts a foreground service of type <code>connectedDevice</code> for the Bluetooth connection.</li>
+    <li>Phone 2 finds the table and connects to Phone 1 over Bluetooth.</li>
+    <li>The game starts; every move is sent between the phones over that connection.</li>
+    <li>Phone 1 goes to the home screen. The ongoing notification “You are hosting a game” shows the service is running.</li>
+    <li>Phone 2 plays a card. Phone 1, still in the background, receives the move and shows “It’s your turn!”.</li>
+    <li>Tapping the notification returns to the game, which stayed connected and in sync.</li>
+    <li>Phone 1 leaves the game: the service stops and its notification disappears.</li>
+  </ol>
+
+  <h2>Why a foreground service is needed</h2>
+  <p>During a game the phones exchange moves continuously over Bluetooth. Players often switch apps, answer a
+  message or turn the screen off while others take their turn. Without the foreground service Android would stop
+  the app and drop the Bluetooth connection, which ends the game for everybody at the table. The service only runs
+  while the user is at a game table and stops as soon as they leave it.</p>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 BlueCard</span>
+    <nav><a href="../">Home</a><a href="../privacy/">Privacy policy</a></nav>
+  </div>
+</footer>
+</body>
+</html>

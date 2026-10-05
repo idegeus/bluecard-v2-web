@@ -19,13 +19,7 @@ Repository *Settings → Pages → Build and deployment*: source **Deploy from a
   the Play listing, so either name this repository `<user>.github.io` or give the site its own domain (add a `CNAME`
   file and a DNS record), and use that address as the website in the Play Console.
 
-## Before going live
-
-Replace `[DEVELOPER NAME]` and `[CONTACT EMAIL]` (privacy page and footers):
-
-```bash
-grep -rn "\[DEVELOPER NAME\]\|\[CONTACT EMAIL\]" --include=*.html .
-```
+## Notes
 
 The Google Play badges are loaded from Google (official badge images); the links point to
 `https://play.google.com/store/apps/details?id=nl.bluecard.app` and work once the app is public.

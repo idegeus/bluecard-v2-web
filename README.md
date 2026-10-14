@@ -9,7 +9,7 @@ Static site for the BlueCard card game app, published with GitHub Pages. No buil
 | `privacy/index.html` | Privacy policy — the URL for the Play Console |
 | `foreground-video/` | Demo video for the Play Console foreground-service declaration |
 | `app-ads.txt` | AdMob seller declaration |
-| `assets/` | Icon, feature graphic, screenshots (JPEG, 540×960), `site.css` |
+| `assets/` | Icon, feature graphic, app screenshots (`app/`, 540 wide, EN + NL), `site.css` |
 
 ## Publishing
 

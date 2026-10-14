@@ -4,14 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BlueCard</title>
-<meta name="description" content="Play Palace, Crazy Eights, President and Hearts together, each on your own phone. Over Bluetooth, no internet needed.">
+<meta name="description" content="Palace, Crazy Eights, President and Hearts together at the table, each on your own phone. Over Bluetooth, no internet needed.">
 <meta property="og:title" content="BlueCard">
-<meta property="og:description" content="Card games together, each on your own phone. Over Bluetooth, no internet needed.">
+<meta property="og:description" content="Card games around the table, each on your own phone. Over Bluetooth, no internet needed.">
 <meta property="og:image" content="assets/feature.jpg">
 <meta name="theme-color" content="#0F5A43">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/icon-192.png">
 <link rel="alternate" hreflang="nl" href="nl/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
@@ -23,69 +26,90 @@
 </header>
 
 <main>
-  <div class="hero">
+  <div class="hero felt">
     <div class="wrap">
       <div>
-        <h1>BlueCard</h1>
+        <h1>Deal everyone in.</h1>
         <p class="games">Palace · Crazy Eights · President · Hearts</p>
-        <p class="lead">Card games together, each on your own phone. Sit around the table, connect over Bluetooth and play — no internet, no accounts.</p>
+        <p class="lead">Sit around the table, each with your own phone. Your cards stay in your hand; the table is shared over Bluetooth. No internet, no accounts.</p>
         <div class="cta">
           <a class="badge" href="https://play.google.com/store/apps/details?id=nl.bluecard.app">
             <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play">
           </a>
-          <span class="soon">iPhone version coming soon</span>
+          <span class="soon">Coming soon to the App Store</span>
         </div>
       </div>
-      <div class="phone"><img src="assets/screens/en-03-together.jpg" alt="Four players at a Palace table in BlueCard" width="540" height="960"></div>
+      <div class="stage">
+        <div class="table-cards" aria-hidden="true">
+          <div class="card"><span class="ix">A<i>♠</i></span><span class="pip">♠</span></div>
+          <div class="card red"><span class="ix">10<i>♦</i></span><span class="pip">♦</span></div>
+          <div class="card red"><span class="ix">2<i>♥</i></span><span class="pip">♥</span></div>
+        </div>
+        <div class="phone"><div class="screen"><img src="assets/app/en-game2.jpg" alt="A game of Crazy Eights in BlueCard: the pile, two opponents and your hand" width="540" height="1091"></div></div>
+      </div>
     </div>
   </div>
 
   <section>
     <div class="wrap">
-      <h2>Your hand stays in your hand</h2>
-      <p class="sub">Everyone sees their own cards on their own screen. The table is shared over Bluetooth.</p>
-      <div class="features">
-        <div class="feature"><div class="ic">📶</div><h3>No internet needed</h3><p>Phones connect directly over Bluetooth. Play on a campsite, in a train or at the kitchen table.</p></div>
-        <div class="feature"><div class="ic">🤖</div><h3>Clever bots</h3><p>Fill empty seats with bots at the level you like, or play a quick game on your own.</p></div>
-        <div class="feature"><div class="ic">🫣</div><h3>Call “Cheat!”</h3><p>Spot someone breaking the rules? You have ten seconds to call them out.</p></div>
-        <div class="feature"><div class="ic">👀</div><h3>Watch along</h3><p>Join a running table as a spectator and take a seat in the next game.</p></div>
-        <div class="feature"><div class="ic">🏠</div><h3>Your house rules</h3><p>Every family plays it differently. Choose the rules you grew up with.</p></div>
-        <div class="feature"><div class="ic">🌍</div><h3>Six languages</h3><p>English, Dutch, French, German, Catalan and Basque.</p></div>
+      <h2>How it works</h2>
+      <p class="sub">Everyone needs the app; that's all. It works on a campsite, on a train or at the kitchen table.</p>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><h3>Open a table</h3><p>One of you taps “Start a game” and picks the game and the house rules.</p></div>
+        <div class="step"><div class="n">2</div><h3>Take a seat</h3><p>The table shows up on the other phones nearby within a few seconds. Tap it to join.</p></div>
+        <div class="step"><div class="n">3</div><h3>Play</h3><p>Everyone plays from their own hand. Short of players? Fill the empty seats with bots.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap games-grid">
+      <div>
+        <h2>Four classics</h2>
+        <p class="sub">Two to seven players, depending on the game.</p>
+        <div class="picker" role="tablist" aria-label="Games">
+          <button class="pick" role="tab" aria-selected="false" data-shot="assets/app/en-game1.jpg" data-alt="A game of Palace">
+            <div class="card"><span class="ix">10<i>♠</i></span><span class="pip">♠</span></div>
+            <div><h3>Palace</h3><p>Hand, face-up and blind cards. Play equal or higher – or burn the pile.</p><small>2–5 players</small></div>
+          </button>
+          <button class="pick" role="tab" aria-selected="true" data-shot="assets/app/en-game2.jpg" data-alt="A game of Crazy Eights">
+            <div class="card red"><span class="ix">8<i>♦</i></span><span class="pip">♦</span></div>
+            <div><h3>Crazy Eights</h3><p>Match the suit or the rank. Special cards make others draw, wait or turn around.</p><small>2–6 players</small></div>
+          </button>
+          <button class="pick" role="tab" aria-selected="false" data-shot="assets/app/en-game3.jpg" data-alt="A game of President">
+            <div class="card"><span class="ix">K<i>♣</i></span><span class="pip">♣</span></div>
+            <div><h3>President</h3><p>Climb from scum to president; the ranking decides who swaps the best cards.</p><small>3–7 players</small></div>
+          </button>
+          <button class="pick" role="tab" aria-selected="false" data-shot="assets/app/en-game4.jpg" data-alt="A game of Hearts">
+            <div class="card red"><span class="ix">Q<i>♥</i></span><span class="pip">♥</span></div>
+            <div><h3>Hearts</h3><p>Avoid the hearts and the queen of spades – or take them all.</p><small>3–6 players</small></div>
+          </button>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="phone small"><div class="screen"><img id="shot" src="assets/app/en-game2.jpg" alt="A game of Crazy Eights" width="540" height="1091" loading="lazy"></div></div>
       </div>
     </div>
   </section>
 
   <section style="padding-top:0">
     <div class="wrap">
-      <h2>Four classic games</h2>
-      <p class="sub">Two to seven players, depending on the game — fill empty seats with bots.</p>
-      <div class="gamelist">
-        <div class="game"><div class="suit">♠</div><h3>Palace</h3><p>Get rid of your hand, then your face-up and blind cards. Play the same or higher — or burn the pile.</p></div>
-        <div class="game"><div class="suit r">♦</div><h3>Crazy Eights</h3><p>Match the suit or the rank. Special cards make others draw, skip or turn the game around.</p></div>
-        <div class="game"><div class="suit">♣</div><h3>President</h3><p>Climb from scum to president. The ranking decides who swaps the best cards next round.</p></div>
-        <div class="game"><div class="suit r">♥</div><h3>Hearts</h3><p>Avoid the hearts and the queen of spades — or take them all and shoot the moon.</p></div>
-      </div>
+      <h2>Like a real card table</h2>
+      <p class="sub">Not a solitaire app with friends bolted on: BlueCard is made for playing together in the same room.</p>
+      <ul class="features">
+        <li><span>♠</span><div><b>Cheating is allowed</b><em>…until someone catches you. Everyone has ten seconds to call “Cheat!”.</em></div></li>
+        <li><span class="r">♥</span><div><b>Your house rules</b><em>Every family plays differently. Pick the rules you grew up with.</em></div></li>
+        <li><span class="r">♦</span><div><b>Watch along</b><em>Join a running game as a spectator and take a seat next round.</em></div></li>
+        <li><span>♣</span><div><b>iPhone and Android together</b><em>Phones connect directly over Bluetooth, whatever brand.</em></div></li>
+        <li><span>♠</span><div><b>Easy or normal bots</b><em>Fill empty seats, or play a quick round on your own.</em></div></li>
+        <li><span class="r">♥</span><div><b>Six languages</b><em>English, Dutch, French, German, Catalan and Basque.</em></div></li>
+      </ul>
     </div>
   </section>
 
-  <section style="padding-top:0">
+  <div class="band felt">
     <div class="wrap">
-      <h2>Screenshots</h2>
-      <div class="shots">
-        <img src="assets/screens/en-01-home.jpg" alt="Home screen" loading="lazy" width="540" height="960">
-        <img src="assets/screens/en-02-cheat.jpg" alt="Calling cheat" loading="lazy" width="540" height="960">
-        <img src="assets/screens/en-04-crazy-eights.jpg" alt="Crazy Eights" loading="lazy" width="540" height="960">
-        <img src="assets/screens/en-05-president.jpg" alt="President" loading="lazy" width="540" height="960">
-        <img src="assets/screens/en-06-hearts.jpg" alt="Hearts" loading="lazy" width="540" height="960">
-        <img src="assets/screens/en-07-results.jpg" alt="Results" loading="lazy" width="540" height="960">
-        <img src="assets/screens/en-08-skins.jpg" alt="Table designs" loading="lazy" width="540" height="960">
-      </div>
-    </div>
-  </section>
-
-  <section class="band">
-    <div class="wrap">
-      <h2>Deal the cards</h2>
+      <h2>Shuffle up</h2>
       <p class="sub">Free on Android, with optional ad removal and table designs.</p>
       <div class="cta">
         <a class="badge" href="https://play.google.com/store/apps/details?id=nl.bluecard.app">
@@ -93,7 +117,7 @@
         </a>
       </div>
     </div>
-  </section>
+  </div>
 </main>
 
 <footer>
@@ -105,5 +129,16 @@
     </nav>
   </div>
 </footer>
+<script>
+  // Pick a game, see it on the phone.
+  document.querySelectorAll('.pick').forEach(function (button) {
+    button.addEventListener('click', function () {
+      document.querySelectorAll('.pick').forEach(function (b) { b.setAttribute('aria-selected', b === button ? 'true' : 'false'); });
+      var shot = document.getElementById('shot');
+      shot.src = button.dataset.shot;
+      shot.alt = button.dataset.alt;
+    });
+  });
+</script>
 </body>
 </html>
